@@ -6,6 +6,9 @@ json_file = os.path.join(ROOT, 'data', 'hh.json')
 
 
 class JSONSaver:
+    """
+    Класс для сохранения информации о вакансиях в JSON-файл
+    """
     @staticmethod
     def add_vacancy(vacancies):
         """
@@ -29,5 +32,3 @@ class JSONSaver:
         with open(json_file, 'r', encoding='utf-8') as file:
             data = json.load(file)
             return data
-
-
