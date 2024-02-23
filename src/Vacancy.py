@@ -15,7 +15,7 @@ class Vacancy:
         Vacancy.vacancies_list.append(self)
 
     def __str__(self):
-        return (f"Вакансия: {self.name}\n"
+        return (f"\nВакансия: {self.name}\n"
                 f"Ссылка: {self.url}\n"
                 f"Компания: {self.employer}\n"
                 f"Зарплата: {self.salary}\n"
