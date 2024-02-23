@@ -44,6 +44,9 @@ class Vacancy:
 
     @staticmethod
     def get_vacancies_by_salary(vacancies, salary):
+        """
+        Сортирует вакансии по минимальной заработной плате
+        """
         sorted_salary = []
         for vacancy in vacancies['items']:
             try:
@@ -61,6 +64,9 @@ class Vacancy:
 
     @staticmethod
     def get_vacancies_by_city(sorted_salary, city):
+        """
+        Фильтрует вакансии по городу
+        """
         filtered_salary = []
         for vacancy in sorted_salary:
             try:
@@ -78,6 +84,6 @@ class Vacancy:
 
     @classmethod
     def print_vacancies(cls, vacancies_list) -> None:
-        """Выводит отобранные вакансии пользователю."""
+        """Выводит отобранные вакансии пользователю"""
         for vacancy in vacancies_list:
             print(vacancy)
