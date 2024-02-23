@@ -19,9 +19,8 @@ class JSONSaver:
         """
         Очищает json файл
         """
-        with open(json_file, 'w', encoding='utf-8') as file:
-            data = json.load(file)
-            data.clear()
+        pass
+
     @staticmethod
     def get_vacancy(file):
         """
