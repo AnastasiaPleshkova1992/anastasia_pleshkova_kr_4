@@ -12,7 +12,7 @@ def user_interaction():
     search_query = str(input("Введите поисковый запрос: "))
     top_n = int(input("Введите количество вакансий для вывода в топ N: "))
     city = str(input("Введите город: "))
-    salary = int(input("Введите минимальную зарплату: "))
+    salary = input("Введите минимальную зарплату: ")
     hh_api = HeadHunter(search_query, top_n)
     hh_vacancies = hh_api.get_vacancies()
     hh_json = JSONSaver()
