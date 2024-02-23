@@ -6,17 +6,12 @@ class HeadHunter(AbstractHeadHunter):
     """
     Класс для работы с API hh.ru
     """
-    def __init__(self, name, top_n):
-        self.name = name
-        self.top_n = top_n
-        self.url = 'https://api.hh.ru'
-
-    def get_vacancies(self):
+    def get_vacancies(self, search_query, top_n):
         """
         Получение вакансий с hh.ru в формате JSON
         """
-        data = requests.get(f"{self.url}/vacancies",
-                            params={'text': self.name,
+        data = requests.get(f"https://api.hh.ru/vacancies",
+                            params={'text': f'{search_query}',
                                     'area': 113,
-                                    'per_page': self.top_n}).json()
+                                    'per_page': f'{top_n}'}).json()
         return data
